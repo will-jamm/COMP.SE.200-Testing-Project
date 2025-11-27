@@ -1,9 +1,8 @@
-# Student template
+# COMP.SE.200 Software Testing Project 
 
 ## Purpose of this repository
 
-This is a project template for students participating in Software Testing course
-at Tampere University.
+This repository is for COMP.SE.200 Testing Project
 
 The repository only contains the source code that is under testing, `package.json` skeleton
 and LICENSE file.
