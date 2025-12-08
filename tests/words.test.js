@@ -12,9 +12,11 @@ test('should split the string using a provided custom regex pattern', () => {
 
 test('should split the string separated by whitespaces', () => {
     expect(words('hello world')).toEqual(['hello', 'world']);
+    expect(words('this is a longer string with spaces'))
+    .toEqual(['this', 'is', 'a', 'longer', 'string', 'with', 'spaces']);
 });
 
-test('should split thestring with multiple spaces & tabs', () => {
+test('should split the string with multiple spaces & tabs', () => {
     expect(words('  foot\tbar six')).toEqual(['foot', 'bar', 'six']);
     });
 
