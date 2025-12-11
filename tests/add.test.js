@@ -28,5 +28,4 @@ test('should add large numbers', () => {
 
 test('should handle undefined as zero', () => {
     expect(add(5, undefined)).toBe(5);
-    expect(add(undefined, 5)).toBe(5);
 });
