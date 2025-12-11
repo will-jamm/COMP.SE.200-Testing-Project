@@ -48,6 +48,24 @@ test('should cache different arguments separately', () => {
     expect(memoized(3)).toBe(6);
 });
 
+test('should handle cache.set returning falsy value', () => {
+    const memoized = memoize((n) => n * 2);
+
+    const customCache = {
+        map: new Map(),
+        has(key) { return this.map.has(key); },
+        get(key) { return this.map.get(key); },
+        set(key, value) {
+            this.map.set(key, value);
+            return undefined;
+        }
+    };
+
+    memoized.cache = customCache
+    expect(memoized(5)).toBe(10);
+    expect(memoized(5)).toBe(10);
+});
+
 test('should handle undefined as argument', () => {
     const memoized = memoize((val) => val === undefined ? 'undefined' : val);
     

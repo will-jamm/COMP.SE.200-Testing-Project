@@ -48,6 +48,11 @@ test('should convert a octal string to a number', () => {
     expect(toNumber('0o77')).toBe(63);
 });
 
+test('should handle bad hexadecimal strings', () => {
+    expect(toNumber('0xGG')).toBeNaN();
+    expect(toNumber('-0x1')).toBeNaN();
+});
+
 test('should convert a negative string to a number', () => {
     expect(toNumber('-12.50')).toBe(-12.50);
 });

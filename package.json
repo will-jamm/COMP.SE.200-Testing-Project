@@ -6,7 +6,29 @@
   "type": "module",
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
+    "test:coverage": "c8 node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "c8": {
+    "reporter":  ["lcov", "text"],
+    "include": [
+      "src/toNumber.js",
+      "src/ceil.js",
+      "src/toString.js",
+      "src/reduce.js",
+      "src/add.js",
+      "src/filter.js",
+      "src/difference. js",
+      "src/words.js",
+      "src/map.js",
+      "src/memoize.js"
+    ],
+    "exclude": [
+      "node_modules/**",
+      "src/. internal/**",
+      "tests/**",
+      "*. config.js"
+    ],
+    "all": true
   },
   "jest": {
     "coveragePathIgnorePatterns": [
