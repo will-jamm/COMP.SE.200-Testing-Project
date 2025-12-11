@@ -4,6 +4,9 @@
 
 This repository is for COMP.SE.200 Testing Project
 
+
+[![Coverage Status](https://coveralls.io/repos/github/will-jamm/COMP.SE.200-Testing-Project/badge.svg?branch=main)](https://coveralls.io/github/will-jamm/COMP.SE.200-Testing-Project?branch=main)
+
 The repository only contains the source code that is under testing, `package.json` skeleton
 and LICENSE file.
 
