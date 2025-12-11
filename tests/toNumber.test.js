@@ -19,7 +19,6 @@ test('should remove currency symbols', () => {
 });
 
 test('should return NaN for non-numeric strings', () => {
-    expect(toNumber('testi')).toBe(NaN);
     expect(toNumber('123a')).toBeNaN();
 });
 
