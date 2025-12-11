@@ -12,7 +12,8 @@
     "coveragePathIgnorePatterns": [
       "/node_modules/",
       "/src/.internal/"
-    ]
+    ],
+     "coverageReporters": ["lcov", "text"]
   },
   "author": "",
   "license": "MIT",
