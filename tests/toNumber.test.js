@@ -2,7 +2,8 @@ import { transformSync } from '@babel/core';
 import toNumber from '../src/toNumber';
 
 test('should convert string to a number', () => {
-    expect(toNumber('6.30')).toBe(6.30)
+    expect(toNumber('6.30')).toBe(6.30);
+    expect(toNumber('50')).toBe(50);
 });
 
 test('should convert a string with comma as a decimal to a number', () => {
