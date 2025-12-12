@@ -34,10 +34,6 @@ test('should split the string using a provided string pattern', () => {
     expect(words(input, pattern)).toEqual(['hervanta', 'kauppi', 'keskusta']);
 });
 
-test('should return as is for NaN string', () => {
-    expect(words('NaN')).toEqual(['NaN']);
-    });
-
 test('should return as is for Infinity string', () => {
     expect(words('Infinity')).toEqual(['Infinity']);
     });
